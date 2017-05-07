@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY killchain "http://referentia.com/killchain/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://referentia.com/killchain/"
+     xml:base="http://referentia.com/killchain/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:killchain="http://referentia.com/killchain/">
+    <owl:Ontology rdf:about="http://referentia.com/killchain/">
+        <dc:description xml:lang="en">An ontology based on the Intrusion Kill Chain model in &quot;Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains&quot; by Eric M. Hutchins∗, Michael J. Cloppert†, Rohan M. Amin, Ph.D.‡ Lockheed Martin Corporation.  Proceedings of ICIW 2011 The 6th International Conference on Information-Warfare &amp; Security held at The George Washington University Washington, DC, USA, 17-18 March 2011</dc:description>
+        <rdfs:comment xml:lang="en">STIX OWL Ontology
+ 
+Copyright (c) 2014 VIStology, Inc., http://www.vistology.com/, Framingham, MA, USA
+
+This file contains an OWL representation of information contained in the  VIStology Knowledge Base. The content of this OWL file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license whose text can be found at http://creativecommons.org/licenses/by-nc/4.0/legalcode. The content of this RDF/OWL file, including the VIStology Knowledgebase content it represents, constitutes the &quot;Work&quot; referred to in the Creative Commons license. The terms of this license equally apply to, without limitation, renamings and other logically equivalent reformulations of the content of this OWL file (or portions thereof) in any natural or formal language, as well as to derivations of this content or inclusion of it in other ontologies.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://referentia.com/killchain/contains -->
+
+    <owl:ObjectProperty rdf:about="&killchain;contains">
+        <owl:inverseOf rdf:resource="&killchain;isContainedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://referentia.com/killchain/installs -->
+
+    <owl:ObjectProperty rdf:about="&killchain;installs">
+        <owl:inverseOf rdf:resource="&killchain;isPrecededBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://referentia.com/killchain/isContainedBy -->
+
+    <owl:ObjectProperty rdf:about="&killchain;isContainedBy"/>
+    
+
+
+    <!-- http://referentia.com/killchain/isPrecededBy -->
+
+    <owl:ObjectProperty rdf:about="&killchain;isPrecededBy"/>
+    
+
+
+    <!-- http://referentia.com/killchain/precedes -->
+
+    <owl:ObjectProperty rdf:about="&killchain;precedes">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&killchain;KillChainPhase"/>
+        <rdfs:domain rdf:resource="&killchain;KillChainPhase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://referentia.com/killchain/ActionOnObjectives -->
+
+    <owl:Class rdf:about="&killchain;ActionOnObjectives">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <owl:disjointWith rdf:resource="&killchain;Reconaissance"/>
+        <dc:description xml:lang="en">Only now, after progressing through the first six phases, can intruders 
+take actions to achieve their original ob jectives. Typically, this ob jective is data exfiltration which 
+involves collecting, encrypting and extracting information from the victim environment; violations 
+of data integrity or availability are potential ob jectives as well. Alternatively, the intruders may 
+only desire access to the initial victim box for use as a hop point to compromise additional systems 
+and move laterally inside the network. 
+</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/CommandAndControl -->
+
+    <owl:Class rdf:about="&killchain;CommandAndControl">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;ActionOnObjectives"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&killchain;Reconaissance"/>
+        <dc:description xml:lang="en">Typically, compromised hosts must beacon outbound to an 
+Internet controller server to establish a C2 channel. APT malware especially requires manual 
+interaction rather than conduct activity automatically. Once the C2 channel establishes, intruders 
+have “hands on the keyboard” access inside the target environment. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/Delivery -->
+
+    <owl:Class rdf:about="&killchain;Delivery">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;Exploitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&killchain;Reconaissance"/>
+        <dc:description xml:lang="en">Transmission of the weapon to the targeted environment. The three most prevalent 
+delivery vectors for weaponized payloads by APT actors, as observed by the Lockheed Martin 
+Computer Incident Response Team (LM-CIRT) for the years 2004-2010, are email attachments, 
+websites, and USB removable media</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/Exploitation -->
+
+    <owl:Class rdf:about="&killchain;Exploitation">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;Installation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&killchain;Reconaissance"/>
+        <dc:description xml:lang="en">After the weapon is delivered to victim host, exploitation triggers intruders’ code. 
+Most often, exploitation targets an application or operating system vulnerability, but it could also 
+more simply exploit the users themselves or leverage an operating system feature that auto-executes 
+code. 
+</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/Installation -->
+
+    <owl:Class rdf:about="&killchain;Installation">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;installs"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;CommandAndControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&killchain;Reconaissance"/>
+        <dc:description xml:lang="en"> Installation of a remote access trojan or backdoor on the victim system allows the adversary to maintain persistence inside the environment. 
+</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/IntrusionKillChain -->
+
+    <owl:Class rdf:about="&killchain;IntrusionKillChain">
+        <rdfs:subClassOf rdf:resource="&killchain;KillChain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;Reconaissance"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;Delivery"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;Exploitation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;Installation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;CommandAndControl"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;Weaponization"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:onClass rdf:resource="&killchain;ActionOnObjectives"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/IntrusionKillChainPhase -->
+
+    <owl:Class rdf:about="&killchain;IntrusionKillChainPhase">
+        <rdfs:subClassOf rdf:resource="&killchain;KillChainPhase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/KillChain -->
+
+    <owl:Class rdf:about="&killchain;KillChain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:allValuesFrom rdf:resource="&killchain;KillChainPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;contains"/>
+                <owl:someValuesFrom rdf:resource="&killchain;KillChainPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">A kill chain is a systematic process to target and engage an adversary to create desired effects. U.S. 
+military targeting doctrine defines the steps of this process as find, fix, track, target, engage, assess 
+(F2T2EA): find adversary targets suitable for engagement; fix their location; track and observe; target 
+with suitable weapon or asset to create desired effects; engage adversary; assess effects (U.S. Department 
+of Defense, 2007). This is an integrated, end-to-end process described as a “chain” because any one 
+deficiency will interrupt the entire process. 
+</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/KillChainPhase -->
+
+    <owl:Class rdf:about="&killchain;KillChainPhase">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/Reconaissance -->
+
+    <owl:Class rdf:about="&killchain;Reconaissance">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;Weaponization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&killchain;Weaponization"/>
+        <dc:description xml:lang="en">Research, identification and selection of targets, often represented as crawling 
+Internet websites such as conference proceedings and mailing lists for email addresses, social 
+relationships, or information on specific technologies</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://referentia.com/killchain/Weaponization -->
+
+    <owl:Class rdf:about="&killchain;Weaponization">
+        <rdfs:subClassOf rdf:resource="&killchain;IntrusionKillChainPhase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&killchain;precedes"/>
+                <owl:someValuesFrom rdf:resource="&killchain;Delivery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Coupling a remote access tro jan with an exploit into a deliverable payload, 
+typically by means of an automated tool (weaponizer). Increasingly, client application data files such 
+as Adobe Portable Document Format (PDF) or Microsoft Office documents serve as the weaponized 
+deliverable. 
+</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

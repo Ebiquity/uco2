@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/a/ontologies/2015/7/untitled-ontology-469"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/a/ontologies/2015/7/untitled-ontology-469">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Account"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AddressRange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attacker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DomainName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Host"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Malware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#communicatesWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dstAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exploits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exposes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccount"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDNSName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasKnownService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVulnerability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inAddressRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvesMalware"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#logsInFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#logsInTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#runs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#srcAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesMalware"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Account"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#logsInTo"/>
+            <Class IRI="#Host"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Address"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dstAddress"/>
+                <Class IRI="#Flow"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDNSName"/>
+                <Class IRI="#DomainName"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIP"/>
+                <Class IRI="#IP"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPort"/>
+                <Class IRI="#Port"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#srcAddress"/>
+                <Class IRI="#Flow"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Attack"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#includesFlow"/>
+                <Class IRI="#Flow"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#involvesMalware"/>
+                <Class IRI="#Malware"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Attacker"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#performs"/>
+                <Class IRI="#Attack"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#usesAddress"/>
+                <Class IRI="#Address"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#usesMalware"/>
+                <Class IRI="#Malware"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Host"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#exposes"/>
+                <Class IRI="#Address"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#runs"/>
+                <Class IRI="#Software"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IP"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#inAddressRange"/>
+            <Class IRI="#AddressRange"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Malware"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#communicatesWith"/>
+                <Class IRI="#Address"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#exploits"/>
+                <Class IRI="#Vulnerability"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Port"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasKnownService"/>
+            <Class IRI="#Service"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Software"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasFlow"/>
+                <Class IRI="#Flow"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasVulnerability"/>
+                <Class IRI="#Vulnerability"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccount"/>
+            <Class IRI="#Account"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Account</IRI>
+        <Literal datatypeIRI="&xsd;string">account on some specific system(s), either belonging to some specific user or a system account. All software runs as some account. All accounts are associated with a user or users (such as system accounts.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Address</IRI>
+        <Literal datatypeIRI="&xsd;string">any address, either inside or outside of the network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AddressRange</IRI>
+        <Literal datatypeIRI="&xsd;string">address range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attack</IRI>
+        <Literal datatypeIRI="&xsd;string">a machine-generated alert of potentially malicious activity, such as from an IDS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attacker</IRI>
+        <Literal datatypeIRI="&xsd;string">a known or suspected adversary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flow</IRI>
+        <Literal datatypeIRI="&xsd;string">a flow of traffic between two addresses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Host</IRI>
+        <Literal datatypeIRI="&xsd;string">Any entity on the network, including PCs, routers, switches, virtual machines, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IP</IRI>
+        <Literal datatypeIRI="&xsd;string">a specific IP address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Malware</IRI>
+        <Literal datatypeIRI="&xsd;string">any malicious software.  This can refer to either a stored binary or a running instance. Malware can contain code to launch an exploit. Malware can itself be an asset that an attacker uses in future attacks (eg. a backdoor left on a compromised system.) or can automatically launch additional attacks on behalf of the original attacker. Malware can be hosted by or communicate with servers controlled by the attacker. Malware can contain code to load other malware. Malware can reuse components from other malware samples.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="&xsd;string">expected or actual service using some port</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="&xsd;string">Any software components on a system, including OSes, applications, services, and libraries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#User</IRI>
+        <Literal datatypeIRI="&xsd;string">legitimate, authorized user of some system(s) \nA user owns, is assigned, and/or uses some hardware. \nA user has an associated account.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vulnerability</IRI>
+        <Literal datatypeIRI="&xsd;string">a flaw in some software, that can cause improper, unintended operation, and can potentially be exploited as part of an attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:comment</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">the calculated confidence score of this edge</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

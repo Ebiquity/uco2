@@ -1,0 +1,1005 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://cybox.mitre.org/cybox_v1#"
+     xml:base="http://cybox.mitre.org/cybox_v1"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://cybox.mitre.org/cybox_v1#">
+                <rdfs:comment xml:lang="en">STIX OWL Ontology
+ 
+Copyright (c) 2014 VIStology, Inc., http://www.vistology.com/, Framingham, MA, USA
+
+This file contains an OWL representation of information contained in the  VIStology Knowledge Base. The content of this OWL file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license whose text can be found at http://creativecommons.org/licenses/by-nc/4.0/legalcode. The content of this RDF/OWL file, including the VIStology Knowledgebase content it represents, constitutes the &quot;Work&quot; referred to in the Creative Commons license. The terms of this license equally apply to, without limitation, renamings and other logically equivalent reformulations of the content of this OWL file (or portions thereof) in any natural or formal language, as well as to derivations of this content or inclusion of it in other ontologies.</rdfs:comment>
+        		<owl:imports rdf:resource="http://vistology.com/ont/STIX/CyboxCommon.owl" />
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#action -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#action"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#easeOfObfuscation -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#easeOfObfuscation"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#event -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#event"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#eventType -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#eventType"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#frequency -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#frequency"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#noisiness -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#noisiness"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#obfuscationTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#obfuscationTechnique"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#object -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#object"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#observable -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#observable"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#observableComposition -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#observableComposition"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#observableSource -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#observableSource"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#observables -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#observables"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#operator -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#operator"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#producerObserver -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#producerObserver"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#statefulMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#statefulMeasure"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#trend -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/cybox_v1#trend"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#description -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#description"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#operator -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#operator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#hasChanged -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#hasChanged"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#keyword"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#rate -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#rate"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#scale -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#scale"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#title -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#title"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#units -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/cybox_v1#units"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Action -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Action">
+        <rdfs:comment>The ActionType is a complex type representing a single cyber observable action.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Event -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#producerObserver"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#MeasureSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#eventType"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#event"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#frequency"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#action"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#eventType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#frequency"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Frequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Event element enables specification of a cyber observable event that is dynamic in nature with specific action(s) taken against specific cyber relevant objects (e.g. a file is deleted, a registry key is created or an HTTP Get Request is received).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#EventType -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#EventType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#HTTPTraffic"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#User/PasswordMgt"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#SessionMgt"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ProcessMgt"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Auto-updateOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#FileOpsCRUD"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ThreadMgt"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#BasicSystemOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AccountOpsAppLayer"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AppLayerTraffic"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#IPC"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Redirection"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#GUI/KVM"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#DNSLookupOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#DataFlow"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#USB/MediaDetection"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#PrivilegeOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AuthenticationOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#SignatureDetection"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Autorun"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#DHCP"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ProceduralCompliance"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ConfigurationManagement"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ServiceMgt"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#SQL"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AnomolyEvents"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#RegistryOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#SocketOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#IPOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#TechnicalCompliance"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#ApplicationLogic"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#EmailOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#MemoryOps"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#APICalls"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AuthorizationACL"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#PacketTraffic"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#PortScan"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Frequency -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Frequency">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#scale"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#trend"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Increasing"/>
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Decreasing"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#trend"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#units"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#rate"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The FrequencyType is a complex type representing the specification of a frequency for a given action or event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ObfuscationTechnique -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#ObfuscationTechnique">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observables"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Observables"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observables"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ObfuscationTechniqueType enables the description of a single  potential technique an attacker could leverage to obfuscate the observability of this Observable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Object -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Object">
+        <rdfs:comment>The Object element identifies and specificies the characteristics of a specific cyber-relevant object (e.g. a file, a registry key or a process).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Observable -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Observable">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#keyword"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observableSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#statefulMeasure"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#StatefulMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#noisiness"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#High"/>
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Medium"/>
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Low"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#event"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observableSource"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#MeasureSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observableComposition"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#easeOfObfuscation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#High"/>
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Medium"/>
+                            <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Low"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#obfuscationTechnique"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#ObfuscationTechnique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#easeOfObfuscation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#title"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#title"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#noisiness"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observableComposition"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#ObservableComposition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ObservableType is a complex type representing a description of a single cyber observable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ObservableComposition -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#ObservableComposition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#observable"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Observable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#operator"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#operator"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ObservablesCompositionType enables the specification of higher-order composite observables composed of logical combinations of other observables.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Observables -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Observables">
+        <rdfs:comment>The Observables element represents a collection of cyber observables.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Operator -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#Operator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#NOT"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#OR"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#AND"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>OperatorTypeEnum is a (non-exhaustive) enumeration of operators.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#StatefulMeasure -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/cybox_v1#StatefulMeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#hasChanged"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#object"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#object"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/cybox_v1#hasChanged"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The StatefulMeasureType is a complex type representing a cyber observable property that is statically stateful in nature (e.g. a registry key holding a certain value, a specific mutex existing or a file having a specific MD5 hash).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AND -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AND">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#APICalls -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#APICalls">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AccountOpsAppLayer -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AccountOpsAppLayer">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AnomolyEvents -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AnomolyEvents">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AppLayerTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AppLayerTraffic">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ApplicationLogic -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ApplicationLogic">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AuthenticationOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AuthenticationOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#AuthorizationACL -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#AuthorizationACL">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Auto-updateOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#Auto-updateOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Autorun -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#Autorun">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#BasicSystemOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#BasicSystemOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ConfigurationManagement -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ConfigurationManagement">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#DHCP -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#DHCP">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#DNSLookupOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#DNSLookupOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#DataFlow -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#DataFlow">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Decreasing -->
+
+    <owl:Thing rdf:about="http://cybox.mitre.org/cybox_v1#Decreasing">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#EmailOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#EmailOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#FileOpsCRUD -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#FileOpsCRUD">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#GUI/KVM -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#GUI/KVM">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#HTTPTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#HTTPTraffic">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#High -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#High"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#IPC -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#IPC">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#IPOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#IPOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Increasing -->
+
+    <owl:Thing rdf:about="http://cybox.mitre.org/cybox_v1#Increasing">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Low -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#Low"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#Medium"/>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#MemoryOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#MemoryOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#NOT -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#NOT">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#OR -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#OR">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#PacketTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#PacketTraffic">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#PortScan -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#PortScan">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#PrivilegeOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#PrivilegeOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ProceduralCompliance -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ProceduralCompliance">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ProcessMgt -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ProcessMgt">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Redirection -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#Redirection">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#RegistryOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#RegistryOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#SQL -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#SQL">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ServiceMgt -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ServiceMgt">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#SessionMgt -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#SessionMgt">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#SignatureDetection -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#SignatureDetection">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#SocketOps -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#SocketOps">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#TechnicalCompliance -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#TechnicalCompliance">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#ThreadMgt -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#ThreadMgt">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#USB/MediaDetection -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#USB/MediaDetection">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#User/PasswordMgt -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/cybox_v1#User/PasswordMgt">
+        <rdf:type rdf:resource="http://cybox.mitre.org/cybox_v1#EventType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

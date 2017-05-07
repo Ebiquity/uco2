@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://cybox.mitre.org/Common#"
+     xml:base="http://cybox.mitre.org/Common"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://cybox.mitre.org/Common#">
+        <rdfs:comment xml:lang="en">STIX OWL Ontology
+ 
+Copyright (c) 2014 VIStology, Inc., http://www.vistology.com/, Framingham, MA, USA
+
+This file contains an OWL representation of information contained in the  VIStology Knowledge Base. The content of this OWL file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license whose text can be found at http://creativecommons.org/licenses/by-nc/4.0/legalcode. The content of this RDF/OWL file, including the VIStology Knowledgebase content it represents, constitutes the &quot;Work&quot; referred to in the Creative Commons license. The terms of this license equally apply to, without limitation, renamings and other logically equivalent reformulations of the content of this OWL file (or portions thereof) in any natural or formal language, as well as to derivations of this content or inclusion of it in other ontologies.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/Common#blockNature -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/Common#blockNature"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#codeExampleLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/Common#codeExampleLanguage"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#description -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/Common#description"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#image -->
+
+    <owl:ObjectProperty rdf:about="http://cybox.mitre.org/Common#image"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#description -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/Common#code -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#code"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#comment"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#imageLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#imageLocation"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#imageTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#imageTitle"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#text -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#text"/>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#textTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://cybox.mitre.org/Common#textTitle"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#contributionLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#contributionLocation"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#dateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#dateTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#email -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#email"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#name -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#name"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#organization -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#organization"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#phone -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#phone"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#role -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Block -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#Block">
+        <rdfs:subClassOf rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#blockNature"/>
+                <owl:onClass rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Block is a Structured_Text element consisting of one of Text_Title, Text, Code_Example_Language, or Code followed by another Block element. Structured_Text elements help define whitespace and text segments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#BlockNature -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#BlockNature">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Bad_Code"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Good_Code"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#List"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Result"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Attack"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Mitigation_Code"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BlockNatureEnum is a (non-exhaustive) enumeration of characterizations of the nature for a given Block.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Contributor -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#Contributor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#organization"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#contributionLocation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#contributionLocation"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#email"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#organization"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#phone"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#email"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#phone"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#role"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#role"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ContributorType represents a description of an individual who contributed as a source of cyber observation data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Image -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#Image">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#imageLocation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#imageLocation"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#imageTitle"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#imageTitle"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ImageType specifies an image.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Language -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#Language">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Pseudocode"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#.NET"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#XML"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#CSharp"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Java"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#C++"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#SQL"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#JSP"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#JavaScript"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#C"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#HTML"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Perl"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#SOAP"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Shell"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Ruby"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#PHP"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#ASP.NET"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Assembly"/>
+                    <rdf:Description rdf:about="http://cybox.mitre.org/Common#Python"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>he LanguageType is a simple type representing the specification of a relevant programming language.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#MeasureSource -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#MeasureSource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The MeasureSourceType is a complex type representing a description of a single cyber observation source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#StructuredText -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#StructuredText">
+        <rdfs:subClassOf rdf:resource="http://cybox.mitre.org/Common#StructuredTextGroup"/>
+        <rdfs:comment>The StructuredTextType is a complex type representing a generalized structure for capturing structured textual information such as descriptions of things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#StructuredTextGroup -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#StructuredTextGroup">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#codeExampleLanguage"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#textTitle"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#code"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#text"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#image"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#Image"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#comment"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The StructuredTextGroup is a grouping of common fields representing a generalized structure for capturing structured textual information such as descriptions of things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#ToolInformation -->
+
+    <owl:Class rdf:about="http://cybox.mitre.org/Common#ToolInformation">
+        <rdfs:comment>The ToolInformationType represens a description of a single automated tool.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/Common#.NET -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#.NET">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#ASP.NET -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#ASP.NET">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Assembly -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Assembly">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Attack -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Attack">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Bad_Code -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Bad_Code">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#C -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#C">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#C++ -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#C++">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#CSharp -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#CSharp">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Good_Code -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Good_Code">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#HTML -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#HTML">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#JSP -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#JSP">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Java -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Java">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#JavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#JavaScript">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#List -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#List">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Mitigation_Code -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Mitigation_Code">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#PHP -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#PHP">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Perl -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Perl">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Pseudocode -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Pseudocode">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Python -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Python">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Result -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Result">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#BlockNature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Ruby -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Ruby">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#SOAP -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#SOAP">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#SQL -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#SQL">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#Shell -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#Shell">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cybox.mitre.org/Common#XML -->
+
+    <owl:NamedIndividual rdf:about="http://cybox.mitre.org/Common#XML">
+        <rdf:type rdf:resource="http://cybox.mitre.org/Common#Language"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

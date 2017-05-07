@@ -1,0 +1,941 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ffrdc.ebiquity.umbc.edu/ns/ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://ffrdc.ebiquity.umbc.edu/ns/ontology/"
+     versionIRI="http://ffrdc.ebiquity.umbc.edu/ns/ontology/">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="cbx" IRI="http://cybox.mitre.org/cybox_v1#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AttackComplexity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttackVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AvailabilityImpact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AvailabilityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaseGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaseScore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaseSeverity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CiaRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confidence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfidentialityImpact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfidentialityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnviromentalGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvironmentalScore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvironmentalSeverity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exploitability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntegrityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedAttackComplexity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedAttackVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedAvailabilityImpact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedCia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedConfidentialityImpact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedIntegrityImpact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedPrivilegesRequired"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedScope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModifiedUserInteraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrivilegesRequired"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RemediationLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Severity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalScore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalSeverity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttackComplexity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttackVector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAvailabilityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAvailabilityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBaseScore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBaseSeverity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCiaRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConfidence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConfidentialityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConfidentialityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEnvironmentalSeverity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExploitability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntegrityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntegrityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedAttackComplexity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedAttackVector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedAvailabilityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedCia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedConfidentialityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedIntegrityImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedPrivilegesRequired"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedScope"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifiedUserInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrivilegesRequired"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRemediationLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReportConfidence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScope"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSeverityEnum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemporalSeverity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUserInteraction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnviromentalScore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTemporalScore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasZeroToTenDecimal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Adjacent_Network"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Changed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Confirmed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Critical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Functional"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Local"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Network"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#None"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Official_Fix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Physical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProofOfConcept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reasonable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Required"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temporary_Fix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unavailable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unchanged"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unproven"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Workaround"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BaseGroup"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasAttackComplexity"/>
+                <Class IRI="#AttackComplexity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasAttackVector"/>
+                <Class IRI="#AttackVector"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasAvailabilityImpact"/>
+                <Class IRI="#Cia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasConfidentialityImpact"/>
+                <Class IRI="#Cia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasIntegrityImpact"/>
+                <Class IRI="#Cia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasPrivilegesRequired"/>
+                <Class IRI="#PrivilegesRequired"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasScope"/>
+                <Class IRI="#Scope"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasUserInteraction"/>
+                <Class IRI="#UserInteraction"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasBaseSeverity"/>
+                <Class IRI="#Severity"/>
+            </ObjectMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#hasZeroToTenDecimal"/>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EnviromentalGroup"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasAvailabilityRequirement"/>
+                <Class IRI="#CiaRequirement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasConfidentialityRequirement"/>
+                <Class IRI="#CiaRequirement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasIntegrityRequirement"/>
+                <Class IRI="#CiaRequirement"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedAttackComplexity"/>
+                <Class IRI="#ModifiedAttackComplexity"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedAttackVector"/>
+                <Class IRI="#ModifiedAttackVector"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedAvailabilityImpact"/>
+                <Class IRI="#ModifiedCia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedConfidentialityImpact"/>
+                <Class IRI="#ModifiedCia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedIntegrityImpact"/>
+                <Class IRI="#ModifiedCia"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedPrivilegesRequired"/>
+                <Class IRI="#ModifiedPrivilegesRequired"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedScope"/>
+                <Class IRI="#ModifiedScope"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasModifiedUserInteraction"/>
+                <Class IRI="#ModifiedUserInteraction"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasEnvironmentalSeverity"/>
+                <Class IRI="#Severity"/>
+            </ObjectMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#hasEnviromentalScore"/>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TemporalGroup"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasExploitability"/>
+                <Class IRI="#Exploitability"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasRemediationLevel"/>
+                <Class IRI="#RemediationLevel"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasReportConfidence"/>
+                <Class IRI="#Confidence"/>
+            </ObjectExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#hasTemporalScore"/>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AvailabilityRequirement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaseScore"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaseSeverity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfidentialityRequirement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvironmentalScore"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvironmentalSeverity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exploitability"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntegrityRequirement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedAttackComplexity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedAttackVector"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedAvailabilityImpact"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedConfidentialityImpact"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedIntegrityImpact"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedPrivilegesRequired"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedScope"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModifiedUserInteraction"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemediationLevel"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalScore"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalSeverity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#AttackVector"/>
+        <NamedIndividual IRI="#Adjacent_Network"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackVector"/>
+        <NamedIndividual IRI="#Adjacent_Network"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedScope"/>
+        <NamedIndividual IRI="#Changed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scope"/>
+        <NamedIndividual IRI="#Changed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confidence"/>
+        <NamedIndividual IRI="#Confirmed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Severity"/>
+        <NamedIndividual IRI="#Critical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exploitability"/>
+        <NamedIndividual IRI="#Functional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackComplexity"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cia"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CiaRequirement"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exploitability"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackComplexity"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedCia"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedPrivilegesRequired"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivilegesRequired"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Severity"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackVector"/>
+        <NamedIndividual IRI="#Local"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackVector"/>
+        <NamedIndividual IRI="#Local"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackComplexity"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cia"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CiaRequirement"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackComplexity"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedCia"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivilegesRequired"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Severity"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CiaRequirement"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Severity"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackVector"/>
+        <NamedIndividual IRI="#Network"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackVector"/>
+        <NamedIndividual IRI="#Network"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cia"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedCia"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedPrivilegesRequired"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedUserInteraction"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrivilegesRequired"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Severity"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserInteraction"/>
+        <NamedIndividual IRI="#None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CiaRequirement"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confidence"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exploitability"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackComplexity"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackVector"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedCia"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedPrivilegesRequired"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedScope"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedUserInteraction"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RemediationLevel"/>
+        <NamedIndividual IRI="#Not_Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RemediationLevel"/>
+        <NamedIndividual IRI="#Official_Fix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackVector"/>
+        <NamedIndividual IRI="#Physical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedAttackVector"/>
+        <NamedIndividual IRI="#Physical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exploitability"/>
+        <NamedIndividual IRI="#ProofOfConcept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confidence"/>
+        <NamedIndividual IRI="#Reasonable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedUserInteraction"/>
+        <NamedIndividual IRI="#Required"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserInteraction"/>
+        <NamedIndividual IRI="#Required"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RemediationLevel"/>
+        <NamedIndividual IRI="#Temporary_Fix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RemediationLevel"/>
+        <NamedIndividual IRI="#Unavailable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModifiedScope"/>
+        <NamedIndividual IRI="#Unchanged"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scope"/>
+        <NamedIndividual IRI="#Unchanged"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confidence"/>
+        <NamedIndividual IRI="#Unknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exploitability"/>
+        <NamedIndividual IRI="#Unproven"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RemediationLevel"/>
+        <NamedIndividual IRI="#Workaround"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAvailabilityImpact"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBaseScore"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasModifiedAvailabilityImpact"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasModifiedConfidentialityImpact"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAttackComplexity"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAttackVector"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Adjacent_Network"/>
+            <NamedIndividual IRI="#Network"/>
+            <NamedIndividual IRI="#Local"/>
+            <NamedIndividual IRI="#Physical"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCia"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCiaRequirement"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+            <NamedIndividual IRI="#Medium"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConfidence"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Reasonable"/>
+            <NamedIndividual IRI="#Confirmed"/>
+            <NamedIndividual IRI="#Unknown"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExploitability"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Functional"/>
+            <NamedIndividual IRI="#Unproven"/>
+            <NamedIndividual IRI="#ProofOfConcept"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedAttackComplexity"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedAttackVector"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Adjacent_Network"/>
+            <NamedIndividual IRI="#Network"/>
+            <NamedIndividual IRI="#Local"/>
+            <NamedIndividual IRI="#Physical"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedCia"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedPrivilegesRequired"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedScope"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Unchanged"/>
+            <NamedIndividual IRI="#Changed"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifiedUserInteraction"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Required"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrivilegesRequired"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRemediationLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Unavailable"/>
+            <NamedIndividual IRI="#Workaround"/>
+            <NamedIndividual IRI="#Official_Fix"/>
+            <NamedIndividual IRI="#Temporary_Fix"/>
+            <NamedIndividual IRI="#Not_Defined"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScope"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Unchanged"/>
+            <NamedIndividual IRI="#Changed"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSeverityEnum"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Medium"/>
+            <NamedIndividual IRI="#High"/>
+            <NamedIndividual IRI="#Critical"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUserInteraction"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#None"/>
+            <NamedIndividual IRI="#Required"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEnviromentalScore"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">10</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTemporalScore"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">10</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasZeroToTenDecimal"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">10</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

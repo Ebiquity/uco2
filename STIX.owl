@@ -1,0 +1,2985 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://stix.mitre.org/STIX#"
+     xml:base="http://stix.mitre.org/STIX"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://stix.mitre.org/STIX#">
+        <rdfs:comment xml:lang="en">STIX OWL Ontology
+ 
+Copyright (c) 2014 VIStology, Inc., http://www.vistology.com/, Framingham, MA, USA
+
+This file contains an OWL representation of information contained in the  VIStology Knowledge Base. The content of this OWL file is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license whose text can be found at http://creativecommons.org/licenses/by-nc/4.0/legalcode. The content of this RDF/OWL file, including the VIStology Knowledgebase content it represents, constitutes the &quot;Work&quot; referred to in the Creative Commons license. The terms of this license equally apply to, without limitation, renamings and other logically equivalent reformulations of the content of this OWL file (or portions thereof) in any natural or formal language, as well as to derivations of this content or inclusion of it in other ontologies.</rdfs:comment>
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/Capec.owl" />
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/Cybox.owl" />
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/CyboxCommon.owl" />
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/DataMarking.owl" />
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/Maec.owl" />
+		<owl:imports rdf:resource="http://vistology.com/ont/STIX/killchain.owl" />										
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cybox.mitre.org/Common#description -->
+
+    <rdf:Description rdf:about="http://cybox.mitre.org/Common#description">
+        <owl:equivalentProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#observable -->
+
+    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#observable">
+        <owl:equivalentProperty rdf:resource="http://stix.mitre.org/STIX#observable"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#operator -->
+
+    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#operator">
+        <owl:equivalentProperty rdf:resource="http://stix.mitre.org/STIX#operator"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#activity -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#activity"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#affectedInfrastructureAssets -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#affectedInfrastructureAssets"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#applicabilityConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#applicabilityConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#assignedContact -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#assignedContact"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#associatedActor -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#associatedActor"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#associatedActorConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#associatedActorConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#associatedCampaign -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#associatedCampaign"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#associatedCampaignConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#associatedCampaignConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#attackPattern -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#attackPattern"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#attributedThreatActorConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#attributedThreatActorConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#attribution -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#attribution"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#campaignName -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#campaignName"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#coaRequested -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#coaRequested"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#coaTaken -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#coaTaken"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#coaType -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#coaType"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#compositeIndicatorExpression -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#compositeIndicatorExpression"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#confidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#confidence"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#confidenceAssertion -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#confidenceAssertion"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#configuration -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#configuration"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#contact -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#contact"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#contributor -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#contributor"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#cost -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#cost"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#courseOfAction -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#courseOfAction"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#description -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#description"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#efficacy -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#efficacy"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#exploit -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#exploit"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#exploitTarget -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#exploitTarget"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#geolocation -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#geolocation"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#handling -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#handling"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#handlingMarkings -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#handlingMarkings"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#historicalCampaign -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#historicalCampaign"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#historicalCampaignConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#historicalCampaignConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#history -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#history"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#identity -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#identity"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#impact -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#impact"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#impactAssessment -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#impactAssessment"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#incident -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#incident"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#indicatedTTP -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#indicatedTTP"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#indicator -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#indicator"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#informationSource -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#informationSource"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#infrastructure -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#infrastructure"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#intent -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#intent"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#intentConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#intentConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#killChain -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#killChain"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#killChainPhase -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#killChainPhase"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#leveragedTTP -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#leveragedTTP"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#leveragedTTPConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#leveragedTTPConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#likelyImpact -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#likelyImpact"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#location -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#location"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#malware -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#malware"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#objective -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#objective"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#observable -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#observable"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#observableCharacterization -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#observableCharacterization"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#observedTTP -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#observedTTP"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#observedTTPConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#observedTTPConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#operator -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#operator"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#potentialCOA -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#potentialCOA"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#producer -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#producer"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#proseDescription -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#proseDescription"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedAddress -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedAddress"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedIncident -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedIncident"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedIncidentConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedIncidentConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedIndicator"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedIndicatorConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedIndicatorConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedTTP -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedTTP"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relatedTTPConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#relatedTTPConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#scope -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#scope"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#sighting -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#sighting"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#sightingConfidence -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#sightingConfidence">
+        <rdfs:subPropertyOf rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#sightingSource -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#sightingSource"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#stage -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#stage"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#structuredCOA -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#structuredCOA"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#structuredDescription -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#structuredDescription"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#suggestedCOA -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#suggestedCOA"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#targetting -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#targetting"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#testMechanism -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#testMechanism"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#testMechanismType -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#testMechanismType"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#threatActor -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#threatActor"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#time -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#time"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#tool -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#tool"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#validTimePosition -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#validTimePosition"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#vulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#vulnerability"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#weakness -->
+
+    <owl:ObjectProperty rdf:about="http://stix.mitre.org/STIX#weakness"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stix.mitre.org/STIX#alternativeId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#alternativeId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#cceId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#cceId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#contributionLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#contributionLocation"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#cveId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#cveId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#cvrf -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#cvrf"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#cweId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#cweId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#dateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#dateTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#detectTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#detectTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#email -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#email"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#endTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#indicatorType -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#indicatorType"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#interpretation -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#interpretation"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#name -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#name"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#namingContext -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#namingContext"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#numberOfPhases -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#numberOfPhases"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#ordinality -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#ordinality"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#organization -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#organization"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#osvdbId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#osvdbId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#phaseId -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#phaseId"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#phone -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#phone"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#priority"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#referenceLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#referenceLocation"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#relationship -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#relationship"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#reportTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#reportTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#role -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#role"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#sightingTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#sightingTimestamp"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#sightingsCount -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#sightingsCount"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#source -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#source"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#startTime"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#suspectedIntent -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#suspectedIntent"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#type -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#type"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#value -->
+
+    <owl:DatatypeProperty rdf:about="http://stix.mitre.org/STIX#value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://capec.mitre.org/capec_v1#AttackPattern -->
+
+    <rdf:Description rdf:about="http://capec.mitre.org/capec_v1#AttackPattern">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#AttackPattern"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://capec.mitre.org/capec_v1#Indicator -->
+
+    <rdf:Description rdf:about="http://capec.mitre.org/capec_v1#Indicator">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#Indicator"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://capec.mitre.org/capec_v1#Observable -->
+
+    <rdf:Description rdf:about="http://capec.mitre.org/capec_v1#Observable">
+        <owl:equivalentClass rdf:resource="http://cybox.mitre.org/cybox_v1#Observable"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://capec.mitre.org/capec_v1#Relationship -->
+
+    <rdf:Description rdf:about="http://capec.mitre.org/capec_v1#Relationship">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#Relationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://capec.mitre.org/capec_v1#Weakness -->
+
+    <rdf:Description rdf:about="http://capec.mitre.org/capec_v1#Weakness">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#Weakness"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://cybox.mitre.org/cybox_v1#Observable -->
+
+    <rdf:Description rdf:about="http://cybox.mitre.org/cybox_v1#Observable"/>
+    
+
+
+    <!-- http://referentia.com/killchain/KillChain -->
+
+    <rdf:Description rdf:about="http://referentia.com/killchain/KillChain">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#KillChain"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://referentia.com/killchain/KillChainPhase -->
+
+    <rdf:Description rdf:about="http://referentia.com/killchain/KillChainPhase">
+        <owl:equivalentClass rdf:resource="http://stix.mitre.org/STIX#KillChainPhase"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Activity -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The DateTime field specifies the date and time at which the activity occured.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#AssociatedActor -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#AssociatedActor">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#ThreatActor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedActorConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedActorConfidence"/>
+                <owl:onClass rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The AssociatedActors field specifies other Threat Actors asserted to be associated with this Threat Actor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#AssociatedCampaign -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#AssociatedCampaign">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#Campaign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedCampaignConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedCampaignConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The AssociatedCampaignType specifies a single other cyber threat Campaign asserted to be associated with this cyber threat Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#AttackPattern -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#AttackPattern">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#proseDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#proseDescription"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The AttackPattern field specifies a single Attack Pattern for this TTP item.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#AttributedThreatActor -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#AttributedThreatActor">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#ThreatActor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#attributedThreatActorConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#attributedThreatActorConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The AttributedThreatActorType specifies a Threat Actor asserted to be attributed for a Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Attribution -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Attribution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#threatActor"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#AttributedThreatActor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>AttributionType specifies suspected Threat Actors attributed to a given Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#COARequested -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#COARequested">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#priority"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#assignedContact"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#assignedContact"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#Contributor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#courseOfAction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#ValidTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#courseOfAction"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The COARequested field specifies and characterizes a requested CourseOfAction for this Incident as specified by the Producer for the Consumer of the Incident Report.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#COATaken -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#COATaken">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#courseOfAction"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#courseOfAction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#ValidTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#contributor"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#Contributor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Time field specifies the relative time criteria for this taken CourseOfAction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Campaign -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Campaign">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#activity"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Intent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedCampaign"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#AssociatedCampaign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#campaignName"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedTTP"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedTTP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#attribution"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Attribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIncident"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedIncident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The CampaignType characterizes  a single cyber threat Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#CompositeIndicatorExpression -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#CompositeIndicatorExpression">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#operator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#OperatorType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#operator"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#indicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Confidence -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Confidence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#value"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#interpretation"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#interpretation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#dateTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#source"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidenceAssertion"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#value"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#source"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ConfidenceType specifies a level of Confidence held in some assertion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Configuration -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Configuration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cceId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cceId"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Configuration field identifies and characterizes a Configuration as a potential ExploitTarget.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Cost -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Cost">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Cost field characterizes the estimated cost for applying this CourseOfAction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#CourseOfAction -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#CourseOfAction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#efficacy"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#objective"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#objective"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#type"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#structuredCOA"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#StructuredCOA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#impact"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#impact"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Impact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cost"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#type"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#stage"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Stage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#structuredCOA"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#efficacy"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Efficacy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#stage"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cost"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Cost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The CourseOfActionType characterizes a Course of Action to be taken in regards to one of more cyber threats. NOTE: This is an initial, rough draft for a schematic implementation for this construct and will require a good deal of review and refinement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Efficacy -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Efficacy">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Efficacy field characterizes the effectiveness of this CourseOfAction in achieving its targeted Objective.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Exploit -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Exploit"/>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#ExploitTarget -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#ExploitTarget">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#potentialCOA"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#vulnerability"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#weakness"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Weakness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#configuration"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Configuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ExploitTarget field characterizes potential targets for exploitation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#GeoLocation -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#GeoLocation">
+        <rdfs:comment>The GeoLocation field specifies a physical location where part of the Incident occured. NOTE: A specific geolocation schematic structure has still not been decided on yet. We will seek to leverage industry standard structure approaches if possible.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#HistoricalCampaign -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#HistoricalCampaign">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#Campaign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#historicalCampaignConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#historicalCampaignConfidence"/>
+                <owl:onClass rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The HistoricalCampaigns field specifies any known Campaigns  attributed to this Threat Actor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Identity -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Identity">
+        <rdfs:comment>The Identity field characterizes the identity of this entry. NOTE: this field&apos;s structure still needs fleshed out more.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Impact -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Impact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Impact field characterizes the estimated impact of applying this CourseOfAction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Incident -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Incident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#history"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#COATaken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#leveragedTTP"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#LeveragedTTP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Intent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#location"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#coaTaken"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#COATaken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#impactAssessment"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#coaTaken"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#impactAssessment"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#coaRequested"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#COARequested"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#contact"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#coaRequested"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#location"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#time"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#IncidentTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIncident"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedIncident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Incident field characterizes  a single cyber threat Incident. NOTE: This is a first very rough draft for the Incident construct and still needs a LOT more work to flesh out appropriately. It is included here as a strawman for collaborative refinement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#IncidentTime -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#IncidentTime">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#ValidTime"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#reportTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#detectTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#reportTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#detectTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Time filed specifies relevant time values associated with this Incident.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Indicator -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Indicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#handling"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Relationship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingsCount"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#alternativeId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#testMechanism"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#TestMechanism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#handling"/>
+                <owl:allValuesFrom rdf:resource="http://data-marking.mitre.org/DataMarking#Marking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingsCount"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observable"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Observable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sighting"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#likelyImpact"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Impact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#indicatorType"/>
+                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#likelyImpact"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#indicatorType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#suggestedCOA"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sighting"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Sighting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#compositeIndicatorExpression"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#indicatedTTP"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#TTP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#validTimePosition"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#ValidTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#compositeIndicatorExpression"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#CompositeIndicatorExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#killChainPhase"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#KillChainPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Light-weight object for capturing metadata relating to indicators. If content producers choose to include optional cybox observable elements then this &apos;indicator&apos; element also serves as a wrapper for that observable, providing incident-specific context to the observable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#InformationSource -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#InformationSource">
+        <rdfs:comment>The InformationSourceType details the source of a given data entry.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Infrastructure -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Infrastructure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observableCharacterization"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Observables"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observableCharacterization"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Infrastructure field characterizes specific classes or instances of infrastructure utilized for cyber attack.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Intent -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Intent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intentConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#suspectedIntent"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intentConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#suspectedIntent"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>IntentType characterizes the suspected intent for a given behavior or action.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#KillChain -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#KillChain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#killChainPhase"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#KillChainPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#numberOfPhases"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#numberOfPhases"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The KillChains field characterizes a specific Kill Chain definition for reference within specific TTP entries, Indicators and elsewhere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#KillChainPhase -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#KillChainPhase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#ordinality"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#phaseId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#ordinality"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#phaseId"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The KillChainPhase field specifies a single Kill Chain phase associated with this TTP item.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#LeveragedTTP -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#LeveragedTTP">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#TTP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#leveragedTTPConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#leveragedTTPConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Location -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#geolocation"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#GeoLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#RelatedIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#affectedInfrastructureAssets"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/cybox_v1#Observables"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Location field specifies the locations (physical and cyber) where the Incident occured.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Malware -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Malware">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#structuredDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#proseDescription"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#structuredDescription"/>
+                <owl:allValuesFrom rdf:resource="http://maec.mitre.org/XMLSchema/maec-core-2#Bundle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#proseDescription"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>he Malware field specifies a single instance of Malware for this TTP item.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Name -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Name">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#text"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cybox.mitre.org/Common#text"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#namingContext"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#namingContext"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Name field specifies a Name used to identify this Campaign. This field can be used to capture various aliases used to identify this Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Objective -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Objective">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#applicabilityConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#applicabilityConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ObjectiveType characterizes the objective of this CourseOfAction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#ObservedTTP -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#ObservedTTP">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#TTP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observedTTPConfidence"/>
+                <owl:onClass rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observedTTPConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The ObservedTTPs field specifies the TTPs that this Threat Actor has been observed to leverage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#OperatorType -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#OperatorType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#OR"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#NOT"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#AND"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#RelatedIncident -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#RelatedIncident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIncidentConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relationship"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIncidentConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#incident"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#incident"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Incident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relationship"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Identifies or characterizes another Incident related to this Incident.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#RelatedIndicator -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#RelatedIndicator">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#Indicator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicatorConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedIndicatorConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The RelatedIndicator field identifies or characterizes a cyber threat Indicator related to this Campaign. Such loose associations between Campaigns and Indicators are typically part of the early phases of Campaign identification and characterization. As the Campaign characterization matures these associations are often used to identify relevant TTPs and/or Incidents associated with the Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#RelatedTTP -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#RelatedTTP">
+        <rdfs:subClassOf rdf:resource="http://stix.mitre.org/STIX#TTP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedTTPConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#relatedTTPConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The RelatedTTPType specifies a single TTP asserted to be related to this cyber threat Campaign.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Relationship -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Relationship">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#indicator"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#scope"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#type"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#scope"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Scope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The relationship-type encapsulates a relationship from the enclosing indicator to one or more associated indicators.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Scope -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Scope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#inclusive"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#exclusive"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Indicates how multiple IndicatorRef elements should be interpreted in this relationship. If &quot;inclusive&quot; is specified, then the relationship being defined is between the subject and the collection of objects indicated by the IndicatorRef elements (i.e. the relationship is not necessarily relevant for any one particular object being referenced, but for the aggregated collection of objects referenced). If &quot;exclusive&quot; is specified, then the relationship being defined is between the specific subject Indicator and each object individually (i.e. this is the same as specifying multiple relationship elements, each with the same @type).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Sighting -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Sighting">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingConfidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingTimestamp"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingConfidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingTimestamp"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#sightingSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This field characterizes a single sighting report for this Indicator.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Stage -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Stage">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#Response"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#Remedy"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Reponse).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#StructuredCOA -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#StructuredCOA">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#coaType"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#referenceLocation"/>
+                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The StructuredCOAType enables the specification of a structured representation for the CourseOfAction potentially for automated consumption and implementation. This type is defined as an abstract type enabling the extension and inclusion of various formats of StructuredCOA specifications.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#TTP -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#TTP">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#attackPattern"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#AttackPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#exploit"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Exploit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#exploitTarget"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#ExploitTarget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#malware"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Malware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#infrastructure"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#tool"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#ToolInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#killChain"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#killChain"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#KillChain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Intent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#targetting"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#infrastructure"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Infrastructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#killChainPhase"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#KillChainPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#targetting"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Identity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>TTPType characterizes an individual adversary TTP.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#TestMechanism -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#TestMechanism">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#efficacy"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Efficacy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#testMechanismType"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#producer"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#referenceLocation"/>
+                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#referenceLocation"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#testMechanismType"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#efficacy"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The TestMechanismType specifies a Test Mechanism effective at identifying the cyber Observables specified in this cyber threat Indicator. This type is defined as an abstract type enabling the extension and inclusion of various formats of Test Mechanism specifications.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#TestMechanismType -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#TestMechanismType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#Snort"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#Etc."/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#OVAL"/>
+                    <rdf:Description rdf:about="http://stix.mitre.org/STIX#Yara"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The TestMechanismTypeEnum specifies an enumerated list of valid Test Mechanism types.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#ThreatActor -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#ThreatActor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#activity"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#observedTTP"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#ObservedTTP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#associatedActor"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#AssociatedActor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#historicalCampaign"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#HistoricalCampaign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#identity"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Confidence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#handlingMarkings"/>
+                <owl:allValuesFrom rdf:resource="http://data-marking.mitre.org/DataMarking#Marking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#handlingMarkings"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#confidence"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#informationSource"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#InformationSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#intent"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Intent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#identity"/>
+                <owl:allValuesFrom rdf:resource="http://stix.mitre.org/STIX#Identity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#ValidTime -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#ValidTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#endTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#startTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#startTime"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#endTime"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A basic representation of a temporal window when the thing (e.g., indicator) is valid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Vulnerability -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Vulnerability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cveId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#osvdbId"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#osvdbId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cveId"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Vulnerability field identifies and characterizes a Vulnerability as a potential ExploitTarget.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Weakness -->
+
+    <owl:Class rdf:about="http://stix.mitre.org/STIX#Weakness">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cweId"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:allValuesFrom rdf:resource="http://cybox.mitre.org/Common#StructuredText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#description"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stix.mitre.org/STIX#cweId"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Weakness field identifies and characterizes a Weakness as a potential ExploitTarget.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stix.mitre.org/STIX#AND -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#AND">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#OperatorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Etc. -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#Etc.">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#NOT -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#NOT">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#OperatorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#OR -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#OR">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#OperatorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#OVAL -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#OVAL">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Remedy -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#Remedy">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#Stage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Response -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#Response">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#Stage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Snort -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#Snort">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#Yara -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#Yara">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#TestMechanismType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#exclusive -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#exclusive">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#Scope"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stix.mitre.org/STIX#inclusive -->
+
+    <owl:NamedIndividual rdf:about="http://stix.mitre.org/STIX#inclusive">
+        <rdf:type rdf:resource="http://stix.mitre.org/STIX#Scope"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
